@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipe</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ae75453581.js"></script>
+</head>
+<body>
+<div class="head-wrap">
+    <header>
+        <h1><i class="fa fa-cutlery" aria-hidden="true"></i> Cooks Secret</h1>
+        <p class="head-info">Your personal recipe page</p>
+    </header>
+    <nav>
+        <ul>
+            <li>Main Dish</li>
+            <li>Appetizer</li>
+            <li>Dessert</li>
+            <li>Breakfast</li>
+        </ul>
+        <button class="add-btn" id="add"><i class="fa fa-plus-square fa-fw" aria-hidden="true"></i> Add Recipe</button>
+    </nav>
+</div>
+<div id="addRecipe" class="modal">
+
+    <div class="modalContent">
+        <div class="modalHeader">
+            <h2>ADD RECIPE</h2>
+            <h2><i class="fa fa-times fa-fw" aria-hidden="true"></i></h2>
+        </div>
+        <div class="modalBody">
+            <form>
+                <div class="form-group">
+                    <label for="name">Recipe Name</label>
+                    <input type="text" id="name" required><label class="alertInfo" for="name"></label>
+                </div>
+                <div class="form-group">
+                    <label for="details">Recipe Details</label>
+                    <textarea id="details" rows="20" required></textarea><label class="alertInfo" for="details"></label>
+                </div>
+                <div class="star-rating">
+                    <ul id="stars">Rating:
+                        <li class="star" data-value="1">
+                            <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class="star" data-value="2">
+                            <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class="star" data-value="3">
+                            <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class="star" data-value="4">
+                            <i class='fa fa-star fa-fw'></i>
+                        </li>
+                        <li class="star" data-value="5">
+                            <i class='fa fa-star fa-fw'></i>
+                        </li>
+                    </ul>
+                </div>
+                    <button id="form-submit" class="btn-submit" type="submit">SUBMIT</button>
+                    <button id="form-cancel" class="btn-cancel" type="reset">CANCEL</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="recipe-background">
+    <section id="recipe-details">
+
+    </section>
+</div>
+<div class="footer-bkgrd">
+    <footer>
+        <p>Created by James Taber for PRW</p>
+    </footer>
+</div>
+<script src="dist/jquery-3.2.1.min.js"></script>
+<script src="plugin.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>

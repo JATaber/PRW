@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif; }
+  @media (min-width: 600px) {
+    html {
+      font-size: 16px; } }
+  @media (min-width: 1200px) {
+    html {
+      font-size: 18px; } }
+
+header, nav, section, footer {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 600px) {
+    header, nav, section, footer {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media (min-width: 1200px) {
+    header, nav, section, footer {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto; } }
+  header h1, nav h1, section h1, footer h1 {
+    color: #F88B00;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 4rem; }
+  header .head-info, nav .head-info, section .head-info, footer .head-info {
+    color: #F88B00;
+    text-align: center; }
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  section article {
+    padding: 10px;
+    margin: 10px;
+    max-width: calc(33% - 2.5rem);
+    background-color: #6E8F35; }
+    section article .artFoot {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+
+.footer-bkgrd {
+  background-color: black;
+  color: #FFFFB7;
+  height: 3rem; }
+
+footer {
+  text-align: center; }
+  footer p {
+    padding-top: 15px; }
+
+.head-wrap {
+  background: url("../images/cook-food-kitchen-eat-54455.jpeg") no-repeat;
+  background-size: cover;
+  height: 15rem; }
+
+nav {
+  color: #F88B00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 70px; }
+  nav ul {
+    list-style: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+    nav ul li {
+      display: inline-block;
+      padding: 0 5px; }
+
+.add-btn {
+  background-color: transparent;
+  color: #F88B00;
+  border: transparent;
+  outline: none;
+  font-size: inherit; }
+
+.active {
+  display: block; }
+
+.add-btn:hover {
+  color: #FFFFB7; }
+
+.recipe-background {
+  background-color: #2B1E00; }
+
+.modal {
+  max-width: 500px;
+  border: 1px solid black;
+  display: none;
+  z-index: 3; }
+  .modal .modalContent .modalHeader {
+    background-color: #2B1E00;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    color: #F88B00; }
+    .modal .modalContent .modalHeader h2 {
+      margin: 10px; }
+  .modal .modalContent .modalBody {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    background-color: #6E8F35; }
+    .modal .modalContent .modalBody form {
+      width: 100%; }
+    .modal .modalContent .modalBody ul {
+      text-align: center; }
+    .modal .modalContent .modalBody li {
+      display: inline-block; }
+    .modal .modalContent .modalBody .btn-submit {
+      float: left;
+      padding: 10px;
+      margin: 5px; }
+    .modal .modalContent .modalBody .btn-cancel {
+      float: right;
+      padding: 10px;
+      margin: 5px; }
+
+textarea {
+  vertical-align: top; }

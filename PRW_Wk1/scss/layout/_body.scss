@@ -1,0 +1,187 @@
+@import '../helper/_variables.scss';
+@import '../helper/_mixins.scss';
+
+html{
+  font-size: $font-size-mob;
+  font-family: $font;
+
+  @include mq(tablet){
+    font-size: $font-size-tab;
+  }
+
+  @include mq(desktop){
+    font-size: $font-size-desk;
+  }
+}
+
+header{
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(tablet){
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(desktop){
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1{
+    color: $orange-color;
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 4rem;
+  }
+
+  .head-info{
+    color: $orange-color;
+    text-align: center;
+  }
+}
+
+nav{
+  @extend header;
+}
+
+section{
+  @extend header;
+
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  article{
+    padding: 10px;
+    margin: 10px;
+    max-width: calc(33% - 2.5rem);
+    background-color: $green-color;
+
+    .artFoot{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+footer{
+  @extend header;
+}
+
+.footer-bkgrd{
+  background-color: black;
+  color: $yellow-color;
+  height: 3rem;
+}
+
+footer{
+  text-align: center;
+
+  p{
+    padding-top: 15px;
+  }
+}
+
+.head-wrap{
+  background: $head-image;
+  background-size: cover;
+  height: 15rem;
+}
+
+nav{
+  color: $orange-color;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+
+  ul{
+    list-style: none;
+    display: inline-flex;
+
+    li{
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+}
+
+.add-btn{
+  background-color: transparent;
+  color: $orange-color;
+  border: transparent;
+  outline: none;
+  font-size: inherit;
+}
+
+.active{
+  display: block;
+}
+
+.add-btn:hover{
+  color: $yellow-color;
+}
+
+.recipe-background{
+  background-color: $dark-bg;
+}
+
+.modal{
+  max-width: 500px;
+  border: 1px solid black;
+  display: none;
+  z-index: 3;
+
+  .modalContent{
+
+    .modalHeader{
+      background-color: $dark-bg;
+      display: inline-flex;
+      justify-content: space-between;
+      width: 100%;
+      color: $orange-color;
+
+      h2{
+        margin: 10px;
+      }
+    }
+
+    .modalBody{
+      display: flex;
+      width: 100%;
+      background-color: $green-color;
+
+      form{
+        width: 100%;
+      }
+
+      ul{
+        text-align: center;
+      }
+
+      li{
+        display: inline-block;
+      }
+
+      .btn-submit{
+        float: left;
+        padding: 10px;
+        margin: 5px;
+      }
+
+      .btn-cancel{
+        float: right;
+        padding: 10px;
+        margin: 5px;
+      }
+    }
+  }
+}
+
+textarea{
+  vertical-align: top;
+}
