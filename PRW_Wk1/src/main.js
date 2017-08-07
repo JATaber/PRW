@@ -17,7 +17,7 @@ $(document).ready(function(){
        modalAdd.show();
    });
 
-   var recData = '';
+   let recData = '';
 
    for(x = 0; x < data.recipes.length; x++){
        const rating = data.recipes[x].starRating;
@@ -26,7 +26,7 @@ $(document).ready(function(){
 
        recData += '<article data-id="' + id+ '">';
        recData += '<h2>' + data.recipes[x].category + '</h2>';
-       recData += '<img src=' + data.recipes[x].photoUrl +' alt="recipe-image">';
+       recData += '<img src="images/food-salad-restaurant-person.jpg" alt="recipe-image">';
        recData += '<h3>'  + data.recipes[x].title + '</h3>';
        recData += '<p>' + desc + '</p>';
        recData += '<div class="artFoot"><p>Star Rating: ' + rating.toFixed(1) + '</p><p><button class="edit-btn" id="edit-btn">' +
@@ -45,6 +45,7 @@ $(document).ready(function(){
         $(this).parent().parent().parent().parent().remove();
         console.log(trashID);
     });
+
     /*
     const remove = $('#del-btn');
 

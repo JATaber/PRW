@@ -27,7 +27,7 @@ $(document).ready(function () {
 
         recData += '<article data-id="' + id + '">';
         recData += '<h2>' + data.recipes[x].category + '</h2>';
-        recData += '<img src=' + data.recipes[x].photoUrl + ' alt="recipe-image">';
+        recData += '<img src="images/food-salad-restaurant-person.jpg" alt="recipe-image">';
         recData += '<h3>' + data.recipes[x].title + '</h3>';
         recData += '<p>' + desc + '</p>';
         recData += '<div class="artFoot"><p>Star Rating: ' + rating.toFixed(1) + '</p><p><button class="edit-btn" id="edit-btn">' + '<i class="fa fa-pencil fa-fw" aria-hidden="true">' + '</i></button><button class="del-btn" id="del-btn">' + '<i class="fa fa-trash fa-fw" id="' + x + '" aria-hidden="true"></i></button></p></div>';
@@ -43,6 +43,7 @@ $(document).ready(function () {
         $(this).parent().parent().parent().parent().remove();
         console.log(trashID);
     });
+
     /*
     const remove = $('#del-btn');
      remove.on('click', function(){

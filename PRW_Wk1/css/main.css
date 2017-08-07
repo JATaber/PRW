@@ -50,6 +50,8 @@ section {
     margin: 10px;
     max-width: calc(33% - 2.5rem);
     background-color: #6E8F35; }
+    section article img {
+      max-width: 100%; }
     section article .artFoot {
       display: -webkit-box;
       display: -ms-flexbox;
