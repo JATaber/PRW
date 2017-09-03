@@ -152,8 +152,19 @@ nav{
 
 .modal{
   display:none;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4);
 
   .modalContent{
+    z-index: 1001;
+    max-width: 400px;
+    margin: auto;
 
     .modalHeader{
       background-color: $dark-bg;
@@ -171,6 +182,7 @@ nav{
       display: flex;
       width: 100%;
       background-color: $green-color;
+
 
       form{
         width: 100%;
@@ -200,8 +212,19 @@ nav{
 }
 
 
+.form-group{
+  margin-left: 10px;
+  border: 5px red;
+}
 
+input[type=text]{
+  width: 95%;
+  font-size: $font-size-desk;
+}
 
 textarea{
   vertical-align: top;
+  resize: none;
+  font-size: $font-size-desk;
+  width: 90%;
 }
