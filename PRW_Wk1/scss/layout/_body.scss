@@ -148,11 +148,10 @@ nav{
   background-color: $dark-bg;
 }
 
+
+
 .modal{
-  max-width: 500px;
-  border: 1px solid black;
-  display: none;
-  z-index: 3;
+  display:none;
 
   .modalContent{
 
@@ -199,6 +198,9 @@ nav{
     }
   }
 }
+
+
+
 
 textarea{
   vertical-align: top;

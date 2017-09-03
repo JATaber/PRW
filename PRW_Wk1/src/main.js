@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
    const data = $.get({
        url:  'https://api.myjson.com/bins/f4ayd',
        dataType: 'json',
@@ -9,12 +11,23 @@ $(document).ready(function(){
 
 
    const modalAdd = $('#addRecipe');
-
    const addBtn = $('#add');
+   const closeModal = $('.fa-times');
+   const cancelBtn = $('.btn-cancel');
 
    addBtn.on('click', function(e){
        e.preventDefault();
-       modalAdd.show();
+       modalAdd.toggle();
+   });
+
+   closeModal.on('click', function(e){
+       e.preventDefault();
+       modalAdd.hide();
+   });
+
+   cancelBtn.on('click', function(e){
+       e.preventDefault();
+       modalAdd.hide();
    });
 
    let recData = '';

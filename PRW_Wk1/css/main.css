@@ -122,10 +122,7 @@ nav {
   background-color: #2B1E00; }
 
 .modal {
-  max-width: 500px;
-  border: 1px solid black;
-  display: none;
-  z-index: 3; }
+  display: none; }
   .modal .modalContent .modalHeader {
     background-color: #2B1E00;
     display: -webkit-inline-box;
