@@ -131,11 +131,14 @@ nav {
   width: 100%;
   background-color: black;
   /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden; }
   .modal .modalContent {
     z-index: 1001;
+    position: relative;
     max-width: 400px;
-    margin: auto; }
+    margin: 0 auto;
+    top: 10%; }
     .modal .modalContent .modalHeader {
       background-color: #2B1E00;
       display: -webkit-inline-box;
@@ -182,3 +185,7 @@ textarea {
   resize: none;
   font-size: 18px;
   width: 90%; }
+
+.dishT {
+  font-size: 18px;
+  margin-top: 10px; }

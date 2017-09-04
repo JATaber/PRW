@@ -160,11 +160,14 @@ nav{
   width: 100%;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4);
+  overflow: hidden;
 
   .modalContent{
     z-index: 1001;
+    position: relative;
     max-width: 400px;
-    margin: auto;
+    margin: 0 auto;
+    top: 10%;
 
     .modalHeader{
       background-color: $dark-bg;
@@ -227,4 +230,9 @@ textarea{
   resize: none;
   font-size: $font-size-desk;
   width: 90%;
+}
+
+.dishT{
+  font-size: $font-size-desk;
+  margin-top: 10px;
 }
