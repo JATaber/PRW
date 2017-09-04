@@ -32,12 +32,9 @@ $(document).ready(function(){
     const cancelBtn = $('.btn-cancel');
     const submitBtn = $('.btn-submit');
 
-    let dish = $('#dishType').val();
-    let title = $('#name').val();
-    let descrip = $('#details').val();
 
-   addBtn.on('click', function(e){
-       e.preventDefault();
+
+   addBtn.on('click', function(){
        modalAdd.toggle();
    });
 
@@ -77,36 +74,41 @@ $(document).ready(function(){
     submitBtn.on('click', function(e){
         e.preventDefault();
 
-        let id = data.length += 1;
+        let articleId = data.length += 1;
+        let arrayID = articleId -= 1;
+        let dish = $('#dishType').val();
+        let title = $('#name').val();
+        let descrip = $('#details').val();
 
-        data.push({recipeID: id,title: title,description: descrip,category: dish,starRating: 0,photoUrl: null});
+        data.push({recipeID: articleId,title: title,description: descrip,category: dish,starRating: 0,photoUrl: null});
 
         data = JSON.parse(storage.getItem("recipes"));
         console.log(data);
 
-        /*recData = '';
+        recData = '';
 
 
-        recData += '<article data-id="' + id + '">';
+        recData += '<article data-id="' + articleId+ '">';
         recData += '<h2>' + dish + '</h2>';
         recData += '<img src="images/food-salad-restaurant-person.jpg" alt="recipe-image">';
-        recData += '<h3>'+ title +'</h3>';
+        recData += '<h3>'  + title + '</h3>';
         recData += '<p>' + descrip + '</p>';
         recData += '<div class="artFoot"><p>Star Rating: 0</p><p><button class="edit-btn" id="edit-btn">' +
             '<i class="fa fa-pencil fa-fw" aria-hidden="true">' +
             '</i></button><button class="del-btn" id="del-btn">' +
-            '<i class="fa fa-trash fa-fw" id="' + x + '" aria-hidden="true"></i></button></p></div>';
+            '<i class="fa fa-trash fa-fw" id="' + arrayID + '" aria-hidden="true"></i></button></p></div>';
         recData += '</article>';
+        console.log(arrayID);
 
         $('#recipe-details').append(recData);
-        modalAdd.hide();*/
+        modalAdd.hide();
     });
 
     $('.fa-trash').on('click', function(e){
         let trashID = e.target.id;
 
 
-        //$(this).parent().parent().parent().parent().remove();
+        $(this).parent().parent().parent().parent().remove();
         console.log(trashID);
     });
 
@@ -115,6 +117,9 @@ $(document).ready(function(){
 
     edit.on('click',function(e){
         let editId = e.target.id;
+
+        $('#dishType').val();
+
 
         modalAdd.toggle();
         //$(this).parent().parent().parent().parent().remove();
