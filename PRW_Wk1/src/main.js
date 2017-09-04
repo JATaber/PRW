@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     const storage = window.localStorage;
     let dataString;
+    let data;
 
     if(!storage.recipes) {
         let storageData = $.get({
@@ -20,12 +21,12 @@ $(document).ready(function(){
 
         console.log(JSON.parse(storage.getItem("recipes")));
     }else{
-        let data = JSON.parse(storage.getItem("recipes"));
+        data = JSON.parse(storage.getItem("recipes"));
 
-        console.log(data);
+        console.log(data.recipes);
+        console.log(data.recipes.length);
     }
 
-    let data = JSON.parse(storage.getItem("recipes"));
     const modalAdd = $('#addRecipe');
     const addBtn = $('#add');
     const closeModal = $('.fa-times');
@@ -50,21 +51,23 @@ $(document).ready(function(){
 
 
    let recData = '';
+    data = JSON.parse(storage.getItem("recipes"));
 
-   for(x = 0; x < data.length; x++){
-       const rating = data[x].starRating;
-       const desc = data[x].description;
-       const id = data[x].recipeID;
+   for(let i = 0; i < data.recipes.length; i++){
+       const rating = data.recipes[i].starRating;
+       const desc = data.recipes[i].description;
+       const id = data.recipes[i].recipeID;
+
 
        recData += '<article data-id="' + id+ '">';
-       recData += '<h2>' + data[x].category + '</h2>';
+       recData += '<h2>' + data.recipes[i].category + '</h2>';
        recData += '<img src="images/food-salad-restaurant-person.jpg" alt="recipe-image">';
-       recData += '<h3>'  + data[x].title + '</h3>';
+       recData += '<h3>'  + data.recipes[i].title + '</h3>';
        recData += '<p>' + desc + '</p>';
        recData += '<div class="artFoot"><p>Star Rating: ' + rating.toFixed(1) + '</p><p><button class="edit-btn" id="edit-btn">' +
            '<i class="fa fa-pencil fa-fw" aria-hidden="true">' +
            '</i></button><button class="del-btn" id="del-btn">' +
-           '<i class="fa fa-trash fa-fw" id="' + x + '" aria-hidden="true"></i></button></p></div>';
+           '<i class="fa fa-trash fa-fw" id="' + i + '" aria-hidden="true"></i></button></p></div>';
        recData += '</article>';
        console.log(id);
    }
@@ -118,7 +121,6 @@ $(document).ready(function(){
     edit.on('click',function(e){
         let editId = e.target.id;
 
-        $('#dishType').val();
 
 
         modalAdd.toggle();

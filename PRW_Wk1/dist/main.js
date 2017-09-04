@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     var storage = window.localStorage;
     var dataString = void 0;
+    var data = void 0;
 
     if (!storage.recipes) {
         var storageData = $.get({
@@ -21,12 +22,12 @@ $(document).ready(function () {
 
         console.log(JSON.parse(storage.getItem("recipes")));
     } else {
-        var _data = JSON.parse(storage.getItem("recipes"));
+        data = JSON.parse(storage.getItem("recipes"));
 
-        console.log(_data);
+        console.log(data.recipes);
+        console.log(data.recipes.length);
     }
 
-    var data = JSON.parse(storage.getItem("recipes"));
     var modalAdd = $('#addRecipe');
     var addBtn = $('#add');
     var closeModal = $('.fa-times');
@@ -48,18 +49,19 @@ $(document).ready(function () {
     });
 
     var recData = '';
+    data = JSON.parse(storage.getItem("recipes"));
 
-    for (x = 0; x < data.length; x++) {
-        var rating = data[x].starRating;
-        var desc = data[x].description;
-        var id = data[x].recipeID;
+    for (var i = 0; i < data.recipes.length; i++) {
+        var rating = data.recipes[i].starRating;
+        var desc = data.recipes[i].description;
+        var id = data.recipes[i].recipeID;
 
         recData += '<article data-id="' + id + '">';
-        recData += '<h2>' + data[x].category + '</h2>';
+        recData += '<h2>' + data.recipes[i].category + '</h2>';
         recData += '<img src="images/food-salad-restaurant-person.jpg" alt="recipe-image">';
-        recData += '<h3>' + data[x].title + '</h3>';
+        recData += '<h3>' + data.recipes[i].title + '</h3>';
         recData += '<p>' + desc + '</p>';
-        recData += '<div class="artFoot"><p>Star Rating: ' + rating.toFixed(1) + '</p><p><button class="edit-btn" id="edit-btn">' + '<i class="fa fa-pencil fa-fw" aria-hidden="true">' + '</i></button><button class="del-btn" id="del-btn">' + '<i class="fa fa-trash fa-fw" id="' + x + '" aria-hidden="true"></i></button></p></div>';
+        recData += '<div class="artFoot"><p>Star Rating: ' + rating.toFixed(1) + '</p><p><button class="edit-btn" id="edit-btn">' + '<i class="fa fa-pencil fa-fw" aria-hidden="true">' + '</i></button><button class="del-btn" id="del-btn">' + '<i class="fa fa-trash fa-fw" id="' + i + '" aria-hidden="true"></i></button></p></div>';
         recData += '</article>';
         console.log(id);
     }
@@ -106,8 +108,6 @@ $(document).ready(function () {
 
     edit.on('click', function (e) {
         var editId = e.target.id;
-
-        $('#dishType').val();
 
         modalAdd.toggle();
         //$(this).parent().parent().parent().parent().remove();
