@@ -71,6 +71,26 @@ body {
     text-align: center;
   }
 
+  .addBtn{
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+
+    .submit{
+      font-size: $largeFont;
+      vertical-align: middle;
+      background-color: $blue;
+      border: none;
+      padding: 10px;
+      float: right;
+    }
+
+    .submit:hover{
+      background-color: $black;
+      color: $white;
+    }
+  }
+
   article{
     max-width: 1200px;
     margin-left: auto;

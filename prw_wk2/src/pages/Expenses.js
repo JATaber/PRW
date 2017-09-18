@@ -20,7 +20,8 @@ const styles = {
         right: 'auto',
         bottom: 'auto',
         marginRight: '-50%',
-        transform: 'translate(-50%, -50%)'
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: 'blue'
     }
 };
 
@@ -43,33 +44,40 @@ class Expenses extends Component{
     closeModal(){
         this.setState({modalIsOpen: false})
     }
-/*
-    afterOpenModal(){
-        this.subtitle.style.color= '#f00'
+
+    componentDidMount(){
+        let expenses = JSON.parse(localStorage.getItem('expenses'));
+        console.log(expenses);
+        return expenses;
     }
-*/
+
     render(){
         return(
             <div className="content">
                 <h2>Expenses</h2>
                 <p className="desc">This is where you can see and enter the money you have spent.</p>
-                <section className="addBtn">
-                    <button className="submit" onClick={this.openModal}><MdAddCircle/> Add expense</button>
+                <article className="addBtn">
+                    <button className="submit" onClick={this.openModal}><MdAddCircle/> ADD EXPENSE</button>
 
                     <Modal
                     isOpen={this.state.modalIsOpen}
-                    //onAfterOpen={this.afterOpenModal}
                     onRequestClose = {this.closeModal}
                     style = {styles.modalWindow}
                     contentLabel = "Add Information"
                     >
-                        <button onClick={this.closeModal}>
-                            Close
-                        </button>
+                        <form>
+                            <label for="name">Income Name</label>
+                            <input type="text" id="name" required></input>
+                            <label for="revenue">Amount</label>
+                            <input type="number" id="revenue"></input>
+                            <button className="formClose" type="submit">
+                                SUBMIT
+                            </button>
+                            <button className="formClose" onClick={this.closeModal}>
+                                CLOSE
+                            </button>
+                        </form>
                     </Modal>
-                </section>
-                <article>
-                    
                 </article>
             </div>
         );

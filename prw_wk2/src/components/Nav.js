@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import Overivew from '../pages/Overview';
-import Expenses from '../pages/Expenses';
-import Income from '../pages/Income';
+
 
 class Nav extends Component {
     render(){

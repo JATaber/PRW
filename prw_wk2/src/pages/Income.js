@@ -41,19 +41,20 @@ class Income extends Component {
     closeModal(){
         this.setState({modalIsOpen: false})
     }
-    /*
-        afterOpenModal(){
-            this.subtitle.style.color= '#f00'
-        }
-    */
+
+    componentDidMount(){
+        let income = JSON.parse(localStorage.getItem('income'))
+        console.log(income);
+        return income;
+    }
 
     render(){
         return(
             <div className="content">
                 <h2>Income</h2>
-                <p className="desc">This is where you can enter and view what money you have coming in</p>
-                <section>
-                    <button className="submit" onClick={this.openModal}><MdAddCircle/>Add expense</button>
+                <p className="desc">This is where you can enter and view what money you have coming in.</p>
+                <article className="addBtn">
+                    <button className="submit" onClick={this.openModal}><MdAddCircle/> ADD INCOME</button>
 
                     <Modal
                         isOpen={this.state.modalIsOpen}
@@ -62,11 +63,23 @@ class Income extends Component {
                         style = {styles.modalWindow}
                         contentLabel = "Add Information"
                     >
-                        <button onClick={this.closeModal}>
-                            Close
+                        <form>
+                            <label for="name">Income Name</label>
+                            <input type="text" id="name" required></input>
+                            <label for="revenue">Amount</label>
+                            <input type="number" id="revenue"></input>
+                            <button className="formClose" type="submit">
+                                SUBMIT
+                            </button>
+                        <button className="formClose" onClick={this.closeModal}>
+                            CLOSE
                         </button>
+                        </form>
                     </Modal>
-                </section>
+                    <ul>
+
+                    </ul>
+                </article>
             </div>
 
         );
