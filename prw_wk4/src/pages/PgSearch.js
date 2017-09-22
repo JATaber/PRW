@@ -51,6 +51,7 @@ class PgSearch extends Component{
         console.log(pins);
     }
 
+
     render(){
         return(
             <main className="searchPage">
