@@ -303,8 +303,10 @@ class PgHome extends Component{
                       contentLabel="Edit your Pin"
                   >
                       <form id="editPin">
-                          <h2 ref={subtitle => this.subtitle = subtitle}>Edit Pin</h2>
-                          <ul id="editErrors" className="errors">
+                          <div style={customStyle.modalHead}>
+                              <h2 ref={subtitle => this.subtitle = subtitle}>Edit Pin</h2>
+                          </div>
+                          <ul id="editErrors" className="errors" style={customStyle.errors}>
                               {
                                   Object
                                       .keys(this.state.editErrors)
@@ -315,21 +317,17 @@ class PgHome extends Component{
                                       })
                               }
                           </ul>
-                          <p>
-                              <label>
-                                  Title
-                                  <input id="editTitle" name="editTitle" type="text" onKeyUp={ (e) => this.setEditTitle(e) }/>
-                              </label>
+                          <p style={customStyle.titleInput}>
+                              <label>Title</label>
+                                  <input style={customStyle.textInput} id="editTitle" name="editTitle" type="text" onKeyUp={ (e) => this.setEditTitle(e) }/>
                           </p>
-                          <p>
-                              <label>
-                                  Description
-                                  <textarea id="editDescription" name="editDescription" type="text" onKeyUp={ (e) => this.setEditDescription(e) }/>
-                              </label>
+                          <p style={customStyle.desInput}>
+                              <label>Description</label>
+                                  <textarea style={customStyle.textArea} rows="10" id="editDescription" name="editDescription" type="text" onKeyUp={ (e) => this.setEditDescription(e) }/>
                           </p>
-                          <p>
-                              <button type="submit" onClick={ (e) => this.updatePin(e) }>SAVE</button>
-                              <button className="close" onClick={ (e) => this.closeEdit(e) }>CLOSE</button>
+                          <p style={customStyle.btns}>
+                              <button style={customStyle.modalBtn} type="submit" onClick={ (e) => this.updatePin(e) }>SAVE</button>
+                              <button style={customStyle.modalBtn} className="close" onClick={ (e) => this.closeEdit(e) }>CLOSE</button>
                           </p>
                       </form>
                   </Modal>

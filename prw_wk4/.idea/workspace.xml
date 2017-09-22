@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PgHome.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PgHome.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/PgHome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="155" column="27" lean-forward="true" selection-start-line="155" selection-start-column="27" selection-end-line="155" selection-end-column="27" />
+            <state relative-caret-position="338">
+              <caret line="335" column="5" lean-forward="true" selection-start-line="335" selection-start-column="5" selection-end-line="335" selection-end-column="5" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PgSearch.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PgSearch.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/PgSearch.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-442">
@@ -85,8 +85,8 @@
         <option value="$PROJECT_DIR$/src/scss/helpers/_variables.scss" />
         <option value="$PROJECT_DIR$/src/scss/layout/_layout.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/pages/PgHome.js" />
         <option value="$PROJECT_DIR$/src/pages/PgSearch.js" />
+        <option value="$PROJECT_DIR$/src/pages/PgHome.js" />
       </list>
     </option>
   </component>
@@ -240,12 +240,12 @@
       <option name="presentableId" value="Default" />
       <updated>1505748131902</updated>
       <workItem from="1505748133009" duration="51471000" />
-      <workItem from="1506064143583" duration="3279000" />
+      <workItem from="1506064143583" duration="3585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54750000" />
+    <option name="totallyTimeSpent" value="55056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="23" width="1361" height="870" extended-state="0" />
@@ -445,22 +445,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/PgHome.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="155" column="27" lean-forward="true" selection-start-line="155" selection-start-column="27" selection-end-line="155" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/PgSearch.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-442">
           <caret line="34" column="60" lean-forward="false" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/PgHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="335" column="5" lean-forward="true" selection-start-line="335" selection-start-column="5" selection-end-line="335" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
