@@ -1,0 +1,208 @@
+@import '../base/_reset';
+@import '../helpers/_variables';
+
+body {
+  font-family: $fontFamily;
+  background-color: $white;
+}
+
+.headerBG{
+  background-color: $green;
+  color: $dark;
+  text-align: center;
+  //height: 237px;
+  background-size: cover;
+
+  header{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  span{
+    font-size: 70px;
+  }
+}
+
+.navBar{
+  padding-top: 40px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  h1{
+    font-size: 30px;
+  }
+
+    ul {
+      list-style: none;
+      display: inline-flex;
+
+      a {
+        text-decoration: none;
+      }
+
+      a:active{
+        color:$green;
+      }
+
+      li{
+        padding: 10px;
+        background-color: $lightPurp;
+        color: $dark;
+        font-size: 20px;
+      }
+
+      li:hover{
+        background-color: $darkPurp;
+        color: $white;
+      }
+    }
+}
+
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+  }
+
+  .pageHead {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .btn {
+      font-size: 18px;
+      float: right;
+      padding: 10px;
+      background-color: $lightPurp;
+    }
+
+    .btn:hover{
+      background-color: $darkPurp;
+      color: $white;
+    }
+  }
+
+  .viewPins{
+    display: flex;
+    list-style: none;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
+
+    .pin{
+      width: calc(33% - 2rem);
+      //display: flex;
+
+      article{
+        margin: 10px;
+        border: 1px solid $green;
+        border-radius: 5px;
+      }
+
+      h3{
+        text-align: center;
+        font-size: 20px;
+      }
+
+      .artImg{
+        width: 100%;
+
+      }
+
+      p{
+        margin-bottom: 20px;
+      }
+
+      .btnCont{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon{
+          font-size: 12px;
+          background-color: $lightPurp;
+          padding: 5px;
+        }
+
+        .icon:hover{
+          background-color: $darkPurp;
+          color: $white
+        }
+      }
+    }
+  }
+}
+
+.searchPage{
+
+  .search{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .append{
+    font-size: 20px;
+    display: flex;
+    margin-bottom: 20px;
+
+    .textInput{
+      flex: 1;
+      height: 5rem;
+      width: 80%;
+      border: none;
+      font-size: 40px;
+    }
+
+    .submitBtn{
+      height: 5rem;
+      width: 5rem;
+      font-size: 40px;
+      line-height: 47px;
+      border: none;
+      color: $dark;
+      background-color: $lightPurp;
+    }
+
+    .submitBtn:hover{
+      color: $white;
+      background-color: $darkPurp;
+    }
+  }
+}
+
+.footerBG {
+  background-color: $dark;
+
+  footer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    color: $green;
+    text-align: center;
+    height: 4rem;
+    line-height: 4rem;
+
+  }
+}
