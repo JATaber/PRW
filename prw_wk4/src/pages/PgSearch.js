@@ -33,23 +33,22 @@ class PgSearch extends Component{
         e.preventDefault();
         let allPins = JSON.parse(localStorage.getItem('pins'));
         let search = document.querySelector('#input').value;
-        let title = this.state.title;
-        let description = this.state.description;
         let pins = this.state.pins;
-        let pin = {title: title, description: description};
+
         console.log(search);
         for(let x in allPins){
 
+            //let pin = {title: allPins[x].title, description: allPins[x].description}
             console.log(allPins[x].description);
 
             if(allPins[x].title === search || allPins[x].description === search){
-                pin = {title: allPins[x].title, description: allPins[x].description}
-                pins.push(allPins[x]);
-                this.setState({viewPins: pins});
-
-                console.log(pins);
+                let pin = {title: allPins[x].title, description: allPins[x].description};
+                this.setState({pins: []});
+                pins.push(pin);
             }
         }
+        this.setState({viewPins: pins});
+        console.log(pins);
     }
 
     render(){
